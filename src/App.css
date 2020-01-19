@@ -1,38 +1,214 @@
-.App {
+.body {
+    height: auto;
+    width: 100%;
+    background-color: lavenderblush;
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+    padding-left: 40px;
+    background-color: lavenderblush;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    background-image: url("https://i.kym-cdn.com/photos/images/newsfeed/000/163/588/spotify.jpg");
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    margin-right: 35px;
+}
+
+.search-album {
+    height: 50vh;
+    width: 100%;
+    background-color: lavender;
+    display: flex;    
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    border-style: groove;
+    overflow-x: scroll;
+}
+
+.add-btn {
+    border: none;
+    --buttonColor: forestgreen;
+
+    background: transparent;
+    color: var(--buttonColor);
+    cursor: pointer;
+    font-size: calc(var(--fontSize) * 1rem);
+    font-weight: bold;
+    outline: transparent;
+}
+
+.add-btn:hover {
+    background-color: darkgreen;
+}
+
+.add-btn:active {
+    background-color: darkgreen;
+    transform: translateY(4px);
+}
+
+.delete-btn {
+    font-size: calc(var(--fontSize) * 1rem);
+    cursor: pointer;
+    background: transparent;
+    outline: transparent;
+    color: var(--buttonColor);
+    --buttonColor: red;
+    border: none;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.delete-btn:active {
+    background-color: darkred;
+    transform: translateY(4px);
+}
+
+.artist {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.album {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.playlist-one {
+    height: 55vh;
+    width: 100%;
+    background-color: lavenderblush;
+    display: column;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-x: scroll;
+}
+
+.playlist-container {
+    padding: 5px;
+    height: 200px;
+    width: 200px;
+    box-shadow: 5px 5px 15px;
+}
+
+.title {
+    display: flex;
+    padding: 25px 25px;
+}
+
+.main-album {
+    padding: 5px 5px;
+}
+
+.main-album:hover .image {
+    transform: translateX(-25%);
+    height: 200px;
+    width: 200px;
+    box-shadow: 5px 5px 15px;
+}
+
+.image {
+    flex: 0 0 19.7%;
+    transition: transform 300ms ease 100ms;
+}
+
+.image:hover ~ .image {
+    transform: translateX(25%);
+}
+
+.image:hover {
+    transform: scale(1.5) !important;
+}
+
+.playlist-name {
+    background: transparent;
+    outline: transparent;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.playlist-name:hover {
+    background-color: white;
+}
+
+.save {
+    background: transparent;
+    outline: transparent;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+}
+
+.edit {
+    background: transparent;
+    outline: transparent;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+}
+
+.edit:hover {
+    background-color: dimgrey;
+}
+
+.save:hover {
+    background-color: dimgrey;
+}
+
+.input-container {
+    display: flex;
+    justify-content: flex-start
+}
+
+.playlist-btns {
+    display: flex;
+}
+
+.header-btns {
+  position: relative;
+  border: none;
+  font-size: 15px;
+  color: black;
+  padding: 20px;
   text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  background: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-btns::after {
+  content: "Hello World";
+  background: lavenderblush;
+  position: absolute;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 5s;
+  background: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.header-btns:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+  background: transparent;
+} 
