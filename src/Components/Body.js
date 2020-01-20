@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchAlbum from './SearchAlbum';
 import axios from 'axios'
 import '../App.css';
+import WelcomePage from './WelcomePage';
 
 class Body extends Component {
     constructor(){
@@ -9,7 +10,8 @@ class Body extends Component {
         this.state = {
             editToggle: true,
             bodyList: [],
-            input: ''
+            input: '',
+            welcomeToggle: true
         }
     }
     componentDidMount(){
@@ -64,16 +66,20 @@ class Body extends Component {
             this.setState({bodyList: res.data})
         })
     }
+
+    turnOff = () => this.setState({welcomeToggle: !this.state.welcomeToggle})
     render() {
         const {playlist} = this.props
+        const {welcomeToggle} = this.state
         console.log(this.state.bodyList)
         return(
             <div className="body">
-                <SearchAlbum playlist={playlist}
+                < WelcomePage welcomeToggle = {welcomeToggle} turnOff={this.turnOff} />
+                { !welcomeToggle && <SearchAlbum playlist={playlist}
                              addToPlaylist={this.addToPlaylist}
-                             deleteFromPlaylist={this.deleteFromPlaylist} />
+                             deleteFromPlaylist={this.deleteFromPlaylist} />}
                 <div className="playlist-one">
-                    {this.state.bodyList.length!==0?<div>{this.state.editToggle?<div>{this.state.bodyList[0].name}</div>:
+                    {this.state.bodyList.length!==0?<div>{this.state.editToggle?<div className="edit-name">{this.state.bodyList[0].name}</div>:
                     
                     <div>
                         <input className="playlist-name" 

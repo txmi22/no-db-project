@@ -106,6 +106,10 @@
     box-shadow: 5px 5px 15px;
 }
 
+.edit-name {
+    padding: 15px;
+}
+
 .title {
     display: flex;
     padding: 25px 25px;
@@ -211,4 +215,31 @@
   opacity: 1;
   transition: 0s;
   background: transparent;
-} 
+}
+
+.welcome-page {
+    background-image: url(https://www.pngkey.com/png/full/236-2369402_seafox-galantis-no-money-cat.png);
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 100%;
+    padding: 70px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.welcome-btn {
+    background: lightseagreen;
+    outline: transparent;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+}
+
+audio {
+    width: 100px;
+}

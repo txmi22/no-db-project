@@ -2,12 +2,12 @@
 
  function Header(){
      return(
-        <div className="header">
+        <header className="header">
             <p className="logo"></p>
             <button className='header-btns'>Home</button>
             <button className='header-btns'>Browse</button>
             <button className='header-btns'>Radio</button>
-       </div>
+       </header>
      )
  }
  export default Header;

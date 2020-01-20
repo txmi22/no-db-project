@@ -22,6 +22,9 @@ class SearchAlbum extends Component {
                         <div className="name-container">
                             <p className="album"> {element.album} </p>
                             <p className="artist"> {element.artist} </p>
+                            <div>
+        <audio ref="audio_tag" src="/songs/Post Malone, Swae Lee - Sunflower (Spider-Man Into the Spider-Verse).mp3" controls/>
+      </div>
                             </div>
                         </div>
                             </div>  

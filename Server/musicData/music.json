@@ -92,7 +92,7 @@
     "id": 16, 
     "artist": "Post Malone",
     "album": "Hollywood's Bleeding",
-    "image": "https://images.genius.com/525a982d2e67ee7992e25b67be71add7.1000x1000x1.jpg"
+    "image": "https://images.genius.com/525a982d2e67ee7992e25b67be71add7.1000x1000x1.jpg" 
 },
 {
     "id": 17,
@@ -189,5 +189,6 @@
     "artist": "Martin Garrix, Khalid",
     "album": "Ocean(feat. Khalid)",
     "image": "https://upload.wikimedia.org/wikipedia/en/f/fd/Martin_Garrix_Ocean.png"
-}   
+} 
 ]
+
